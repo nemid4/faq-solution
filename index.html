@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <!-- <link rel = "JavaScript" href="./main.js"> -->
+  <title></title>
+</head>
+<body>
+  <section>
+    
+    <div class="container">
+      
+
+<header>
+  <h1><img src="./assets/images/icon-star.svg" alt=""> FAQs</h1>
+</header>
+
+      <!-- <div class="headline"><h1><span><img src="assets/images/icon-star.svg" alt="star"></span>FAQs</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" fill="none" viewBox="0 0 40 41"><path fill="#AD28EB" d="M37.5 20.5a2.467 2.467 0 0 1-1.64 2.344l-9.913 3.604-3.603 9.911a2.5 2.5 0 0 1-4.688 0l-3.604-9.922-9.911-3.593a2.5 2.5 0 0 1 0-4.688l9.921-3.604 3.594-9.911a2.5 2.5 0 0 1 4.688 0l3.604 9.921 9.911 3.594A2.467 2.467 0 0 1 37.5 20.5Z"/></svg>
+    </div> -->
+
+
+
+<div class="accordion">
+  <div class="accordion-header">
+    <h3>What is Frontend Mentor, and how will it help me?</h3>
+ <button class="button">
+ <img  class="plus-icon" src="assets/images/icon-plus.svg" alt="collapse">
+ <img class="minus-icon" src="assets/images/icon-minus.svg">
+ </button>
+</div>
+  <p class="accordion-answers">Frontend mentors offers realistic coding challenges to help 
+  developers improve their frontend coding skills with projects in
+  HTML, CSS, and JavaScript. It's suitable for all levels and ideal for
+  portfolio building.</p>
+
+</div>
+    
+      <!-- second accordion -->
+
+<div class="accordion">
+  <div class="accordion-header">
+    <h3>Is Frontend Mentor free? 
+    </h3>
+    <button class="button"><img  class="plus-icon" src="assets/images/icon-plus.svg" alt="expand">
+      <img class="minus-icon" src="assets/images/icon-minus.svg">
+    </button>
+  </div>
+  <p class="accordion-answers">Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+  option providing access to a range of projects suitable for all skill levels.</p>
+
+</div>      
+
+
+<div class="accordion">
+  <div class="accordion-header">
+    <h3>I use Frontend Mentor projects in my portfolio?</h3>
+    <button class="button"><img  class="plus-icon" src="assets/images/icon-plus.svg" alt="expand">
+      <img class="minus-icon" src="assets/images/icon-minus.svg">
+    </button>  
+  </div>
+  <p class="accordion-answers">Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+  way to showcase your skills to potential employers!</p>
+</div>
+
+
+<div class="accordion">
+ <div class="accordion-header">
+  <h3>How can i get help if I'm stuck on a challenge?</h3>
+  <button class="button"><img class="plus-icon" src="assets/images/icon-plus.svg" alt="expand">
+    <img class="minus-icon" src="assets/images/icon-minus.svg">
+  </button>  
+ </div>
+  <p class="accordion-answers">The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+    channel where you can ask questions and seek support from other community members.</p>
+</div>
+</div>
+  </section>
+<script>
+  const buttons = document.querySelectorAll('.button');
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', function () {
+        this.classList.toggle('active');
+        
+        const accordion = this.closest('.accordion');
+        const accordionAnswer = accordion.querySelector('.accordion-answers');
+        const plusIcon = this.querySelector('.plus-icon');
+        const minusIcon = this.querySelector('.minus-icon');
+
+        if (accordionAnswer.style.maxHeight) {
+            accordionAnswer.style.maxHeight = null;
+            plusIcon.style.display = 'flex';
+            minusIcon.style.display = 'none';
+        } else {
+            accordionAnswer.style.maxHeight = accordionAnswer.scrollHeight + 'px';
+            plusIcon.style.display = 'none';
+            minusIcon.style.display = 'flex';
+        }
+    });
+});
+
+</script>
+</body>
+</html>
